@@ -1,0 +1,32 @@
+p{
+    font-family: "Modern Antiqua Static", serif;
+    font-weight: 750;
+    font-style: normal;
+    padding:25px;
+}
+dd{
+    font-family: "Modern Antiqua Static", serif;
+    font-weight: 750;
+    font-style: normal;
+    padding: 20px;
+}
+img{
+    margin:25px;
+    padding:20px; 
+}
+h3{
+    padding:25px;
+}
+h2{
+    padding:25px;
+}
+h1{
+    padding:20px;
+}
+li{
+    padding:10px;
+}
+#content-wrapper{
+    display: flex;
+        flex-direction: row-reverse;
+}
