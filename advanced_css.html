@@ -8,22 +8,52 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Old+Persian&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+<script>
+    showing= "none"
+    function show(){
+        alert("The content has changed")
+        if(showing=="none"){
+        document.getElementById("hidden").style.display="block"
+        showing="block"
+        document.getElementById("button").innerHTML="Show Less"
+        }else{
+        document.getElementById("hidden").style.display="none"
+        showing="none"
+        document.getElementById("button").innerHTML="Show More"
+        }
+    }
+    images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGm4yaHui_o0QjiFM9InW-d-sNo_qb7T5Z7g&s","https://64.media.tumblr.com/47946b089003822f2c695a98cd59b9eb/0f403720779ace17-49/s540x810/f17767c84ca47cf218f763c2465a3adcb758a8c4.pnj","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSJB8iwMqu_JtgJ4dBkq4aZCS3Gj45CnKV1rq-q1erp8ZK2lmmWlfH6ZSDgxIvMnuSHeY&usqp=CAU","https://64.media.tumblr.com/e2a5308b147039e8dfcc17ac336005af/5283d802f6a414c3-19/s540x810/c86c52a481aa042f80f5c1518ee71640b2267db7.pnj","https://upload.wikimedia.org/wikipedia/en/8/83/Conner_Kent.png"]
+    index=0
+    function change(){
+        document.getElementById("one").src= images[index]
+        index +=1
+        if(index>= images.length){
+            index=0
+        }
+    }
+    function colors(){
+        document.getElementById("left").style.color = document.getElementById("user").value
+    }
+    
+</script>
 </head>
 <body>
-    <h1>Title</h1>
-    
+    <h1 onclick={colors()}>Title</h1>
+    <input type="color" id="user">
     <div id="content-wrapper">
     <div id="left">
-        <p>eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     
 <br><br>
-        <p>eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate</p>
-        <button>Click me</button>
+<p id="hidden">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        
         </div>
+        <button id="button"onclick={show()}>Show More</button>
     <div id="right">
         <div id="image-wrapper">
-        <img id="one" alt="kon" src="https://upload.wikimedia.org/wikipedia/en/8/83/Conner_Kent.png">
-        <img id="two" alt="kon" src="https://upload.wikimedia.org/wikipedia/en/8/83/Conner_Kent.png">
+        <img id="one" alt="kon" onmouseover={change()} src="https://upload.wikimedia.org/wikipedia/en/8/83/Conner_Kent.png">
+        <img id="two" alt="batman" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5CsvvbQt9_OLz6WSrPjw5LjCV1F4J8IBPNQ&s">
         <img id="three" alt="kon" src="https://upload.wikimedia.org/wikipedia/en/8/83/Conner_Kent.png">
         </div>
         </div>
