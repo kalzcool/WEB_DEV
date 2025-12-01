@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utah Staycation</title>
+    <script>
+        showing= "none"
+        function show(){
+            if(showing=="none"){
+            document.getElementById("hidden").style.display="block"
+            showing="block"
+            document.getElementById("button").innerHTML="Show Less"
+            }else{
+            document.getElementById("hidden").style.display="none"
+            showing="none"
+            document.getElementById("button").innerHTML="Show More"
+            }
+        }
+        images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGm4yaHui_o0QjiFM9InW-d-sNo_qb7T5Z7g&s","https://64.media.tumblr.com/47946b089003822f2c695a98cd59b9eb/0f403720779ace17-49/s540x810/f17767c84ca47cf218f763c2465a3adcb758a8c4.pnj","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSJB8iwMqu_JtgJ4dBkq4aZCS3Gj45CnKV1rq-q1erp8ZK2lmmWlfH6ZSDgxIvMnuSHeY&usqp=CAU","https://64.media.tumblr.com/e2a5308b147039e8dfcc17ac336005af/5283d802f6a414c3-19/s540x810/c86c52a481aa042f80f5c1518ee71640b2267db7.pnj","https://upload.wikimedia.org/wikipedia/en/8/83/Conner_Kent.png"]
+        index=0
+        function change(){
+            document.getElementById("one").src= images[index]
+            index +=1
+            if(index>= images.length){
+                index=0
+            }
+        }
+        function colors(){
+            document.getElementById("left").style.color = document.getElementById("user").value
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>Staycation</h1>
+    
+</body>
+</html>
