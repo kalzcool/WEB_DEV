@@ -30,6 +30,17 @@
             
             
         </style>
+        <script>
+              images = ["https://ih1.redbubble.net/image.4744804180.3460/flat,750x,075,f-pad,750x1000,f8f8f8.u3.jpg","https://i.quotev.com/pp2lrlklcsfq.jpg","https://i.pinimg.com/736x/c9/ae/16/c9ae16938c92f7d164c7beadc4cf4c5c.jpg","https://i.pinimg.com/736x/4a/97/d3/4a97d311dea1e474a371f2da2cfcf7ab.jpg"]
+            index=0
+            function sophie(){
+            document.getElementById("sf2").src= images[index]
+            index +=1
+            if(index>= images.length){
+            index=0
+            }
+    }
+        </script>
 
     </head>
     <body> 
@@ -46,7 +57,7 @@
        
             <div id="content-wrapper">
             <img src="https://i.pinimg.com/750x/49/3d/29/493d290695a37aa1161ba433b638ebc1.jpg" alt="kotlc group photo" id="kgp">
-            <img src="https://i.pinimg.com/736x/4a/97/d3/4a97d311dea1e474a371f2da2cfcf7ab.jpg" alt="Sophie Foster book 2 cover" id="sf2"/> 
+            <img onmouseover={sophie()} src="https://i.pinimg.com/736x/4a/97/d3/4a97d311dea1e474a371f2da2cfcf7ab.jpg" alt="Sophie Foster book 2 cover" id="sf2"/> 
             </div>
             <div><h2>Main characters, in order of apperence</h2></div>
             <div>
@@ -76,6 +87,7 @@
             
                 <p>We meet Fitz nearly as quickly as we meet Sophie. In the beginning at the muesum finding Sophie. He reveals to her that she is an elf and eventually is the one to take her to the elvin world. This 15 year old boy has Sohpie's heart before she realizes how to distinguish romantic and platonic feelings. We learn throughout the series about Fitz's anger issues and need to feel important. This cna cause a bit of conflict but ultimatley not bad. He is one of the chatracters who show up the most and is there for Sophie, more in later books than the first one. </p>
             </div>
+            <button>books</button>
         </body>
 
 </html>
