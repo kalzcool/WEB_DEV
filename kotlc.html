@@ -34,12 +34,26 @@
               images = ["https://ih1.redbubble.net/image.4744804180.3460/flat,750x,075,f-pad,750x1000,f8f8f8.u3.jpg","https://i.quotev.com/pp2lrlklcsfq.jpg","https://i.pinimg.com/736x/c9/ae/16/c9ae16938c92f7d164c7beadc4cf4c5c.jpg","https://i.pinimg.com/736x/4a/97/d3/4a97d311dea1e474a371f2da2cfcf7ab.jpg"]
             index=0
             function sophie(){
-            document.getElementById("sf2").src= images[index]
-            index +=1
-            if(index>= images.length){
-            index=0
+                document.getElementById("sf2").src= images[index]
+                index +=1
+                if(index>= images.length){
+                index=0
             }
+        
     }
+            showing= "none"
+            function show(){
+            if(showing=="none"){
+            document.getElementById("hidden").style.display="block"
+            showing="block"
+            document.getElementById("button").innerHTML="Show More"
+            }else{
+            document.getElementById("hidden").style.display="none"
+            showing="none"
+            document.getElementById("button").innerHTML="Show Less"
+        }
+    }
+    
         </script>
 
     </head>
@@ -87,7 +101,17 @@
             
                 <p>We meet Fitz nearly as quickly as we meet Sophie. In the beginning at the muesum finding Sophie. He reveals to her that she is an elf and eventually is the one to take her to the elvin world. This 15 year old boy has Sohpie's heart before she realizes how to distinguish romantic and platonic feelings. We learn throughout the series about Fitz's anger issues and need to feel important. This cna cause a bit of conflict but ultimatley not bad. He is one of the chatracters who show up the most and is there for Sophie, more in later books than the first one. </p>
             </div>
-            <button>books</button>
+            <button id="button" onclick={show()}>Show less</button>
+            <div id="hidden">
+                <img  alt="silly fitz" src="https://64.media.tumblr.com/8e4493e032eeb9ebd982d399292cd0e3/19ac66575321cb5e-37/s640x960/8990f917708b7dd7ed9140351a0d4d0b0423d202.jpg">
+                <p>After manifesting five abilities throughout the books, one might assume that she would easily be victorious. But the Neverseen always seems to be one step ahead, or many. A witness to many kidnappings, and experiencing one herself, Sophie thought she was prepared for everything. But with twists at every step, she questions if things could get any worse, which always seems to happen. Experiencing betrayals and losses she never thought possible, Sophie still pushes through the hardships.
+                With the help of her friends, family, and creators, the Black Swan, Sophie pushes through each battle she faces. The question that spreads among the fans of the New York Times bestselling series is, who will emerge as the victor? The Moonlark and the Black Swan, or the forces of evil? Read through this thrilling, heart-stopping book series to find the answers!</p>
+            </div>
+            
+            
+            
+
+            
         </body>
 
 </html>
