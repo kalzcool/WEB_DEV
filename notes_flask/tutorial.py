@@ -7,9 +7,9 @@ def home():
     if request.method =="POST":
         return redirect(url_for("user", name=request.form["name"]))
     return render_template ("index.html")
-@app.route("/content")
+@app.route("/contact")
 def contact():
-    return "<p>Don't contact me. I don't want to talk to you"
+    return render_template("contact.html")
 
 @app.route("/<name>")
 def user(name):
